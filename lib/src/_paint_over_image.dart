@@ -923,14 +923,14 @@ class ImagePainterState extends State<ImagePainter> {
                 }
                 return Row(
                   children: [
-                    Checkbox.adaptive(
+                    Checkbox(
                       value: _controller.shouldFill,
                       onChanged: (val) {
                         _controller.update(fill: val);
                       },
                     ),
                     Text(
-                      'Fill',
+                      textDelegate.fill,
                       style: Theme.of(context).textTheme.bodyMedium,
                     )
                   ],
